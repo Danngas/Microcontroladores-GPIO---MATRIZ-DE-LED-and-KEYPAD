@@ -6,6 +6,7 @@
 #include "buzzer.c" 
 #include "animacoes.h"
 #include "stdlib.h"
+#include "string.h"
 //#include "matrizled.c"
 
 
@@ -138,14 +139,25 @@ int main(){
    printf("Tecla pressionada: %c\n");
 
 
+
   // Não faz mais nada. Loop infinito.
+
 
 
 while (1){
 
    
         char key = get_keypad_input();
-        
+        char comando[50];
+        printf("Digite um comando: ");
+        scanf("%s", comando);
+ if (strcmp(comando, "GREEN") == 0){
+    
+    Animacao1();
+ }
+    
+
+    
         
         if (key != 0) {
             // Imprimir a tecla pressionada
@@ -168,7 +180,6 @@ while (1){
             if (key == '8')
                 handle_key_8();
             if (key == '9')
-             teste2();
                 handle_key_9();
 
             // Tratar teclas de controle de LED RGB
