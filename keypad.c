@@ -15,7 +15,7 @@ char keypad_layout[4][4] = {
     {'*', '0', '#', 'D'}};
 
 const uint8_t keypad_row_pins[4] = {1, 2, 3, 4};
-const uint8_t keypad_col_pins[4] = {5, 6, 8, 9};
+const uint8_t keypad_col_pins[4] = {6, 8, 9, 10};
 
 // Função para inicializar os pinos GPIO
 void ini_keypad()

@@ -75,6 +75,8 @@ target_link_libraries(neopixel_pio
         hardware_pio
         hardware_clocks
         hardware_pwm
+        hardware_adc
+        pico_bootrom
         )
 
 pico_add_extra_outputs(neopixel_pio)
