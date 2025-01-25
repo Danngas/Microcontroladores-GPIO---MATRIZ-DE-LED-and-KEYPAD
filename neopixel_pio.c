@@ -6,13 +6,15 @@
 #include "buzzer.c" 
 #include "animacoes.h"
 #include "stdlib.h"
+#include "string.h"
+#include "pico/bootrom.h"
+
+
+
+
 //#include "matrizled.c"
 
-
-
-
 //FIM DO FUNCIONAMENTO DA MATRIZ DE LEDS-------------------------------------------------------------------------------------
-
 
 // Definir os pinos GPIO para LEDs e Buzzer
 #define LED_RED_PIN 13
@@ -21,10 +23,12 @@
 #define BUZZER_PIN 21
 #define LED_PIN 7 
 
+//botão de interupção
+const uint button_0 = 5;
 
 // Função para inicializar os pinos GPIO
 void ini_leds(){
-    
+ 
 
     // Inicializar os pinos dos LEDs como saída
     gpio_init(LED_RED_PIN);
@@ -37,10 +41,7 @@ void ini_leds(){
 }
 
 
-
-// Função para controlar o Buzzer
-void desligarleds()
-{
+void desligarleds(){
 
 }
 
@@ -69,47 +70,38 @@ void control_rgb_led(char key)
 
 
 // Funções para teclas numéricas
-void handle_key_1()
-{
+void handle_key_1(){
 
 }
 
-void handle_key_2()
-{
+void handle_key_2(){
 
 }
 
-void handle_key_3()
-{
+void handle_key_3(){
 
 }
 
-void handle_key_4()
-{
+void handle_key_4(){
  
 }
 
 
-void handle_key_5()
-{
+void handle_key_5(){
 
 }
 
-void handle_key_6()
-{
-
+void handle_key_6(){
 
 
 }
 
 
-void handle_key_7()
-{
+void handle_key_7(){
 
 }
 
-void handle_key_8()
-{
+void handle_key_8(){
     // Implementação futura
 }
 
@@ -120,6 +112,12 @@ void handle_key_9()
 
 // Função para escanear o teclado e detectar uma tecla pressionada
 
+//rotina da interrupção
+static void gpio_irq_handler(uint gpio, uint32_t events){
+    printf("Interrupção ocorreu no pino %d, no evento %d\n", gpio, events);
+    printf("HABILITANDO O MODO GRAVAÇÃO");
+	reset_usb_boot(0,0); //habilita o modo de gravação do microcontrolador
+}
 
 
 
@@ -128,31 +126,58 @@ void handle_key_9()
 
 // Loop principal do programa
 int main(){
+    
+    
+    //inicializar o botão de interrupção - GPIO5
+    gpio_init(button_0);
+    gpio_set_dir(button_0, GPIO_IN);
+    gpio_pull_up(button_0);
+    
+    // INICIALIZA ALGUNS COMPONENTES
     stdio_init_all();
-    npInit(LED_PIN);
-    ini_leds();
 
+    npInit(LED_PIN);
+    //INICIALIZA  AMTRIZ DE LEDS 5X5
+    ini_leds();
+    //INICIALIZA O TECLADO
     ini_keypad();
+
+    //INICIALIZA O BUZZER
     pwm_init_buzzer(BUZZER_PIN);
+    pwm_init_buzzer(BUZZER_PIN);
+
+    //interrupção da gpio habilitada
+    gpio_set_irq_enabled_with_callback(button_0, GPIO_IRQ_EDGE_FALL, 1, & gpio_irq_handler);
 
    printf("Tecla pressionada: %c\n");
 
 
+
   // Não faz mais nada. Loop infinito.
+
 
 
 while (1){
 
    
         char key = get_keypad_input();
-        
+      //  char comando[50];
+      //  printf("Digite um comando: ");
+      //  scanf("%s", comando);
+ //if (strcmp(comando, "GREEN") == 0){
+
+   // Animacao1();
+ //}
+    
+
+    
         
         if (key != 0) {
             // Imprimir a tecla pressionada
             printf("Tecla pressionada: %c\n", key);
             // Tratar teclas numéricas
             if (key == '1')    
-                handle_key_1();
+                Animacao1();
             if (key == '2')
                 handle_key_2();
             if (key == '3')
@@ -168,7 +193,6 @@ while (1){
             if (key == '8')
                 handle_key_8();
             if (key == '9')
-             teste2();
                 handle_key_9();
 
             // Tratar teclas de controle de LED RGB
