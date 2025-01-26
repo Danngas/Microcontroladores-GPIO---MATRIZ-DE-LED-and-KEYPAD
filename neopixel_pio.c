@@ -83,7 +83,7 @@ void handle_key_3(){
 }
 
 void handle_key_4(){
- 
+ Animacao4();
 }
 
 
