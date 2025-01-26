@@ -75,7 +75,7 @@ void handle_key_1(){
 }
 
 void handle_key_2(){
-
+ Animacao2();
 }
 
 void handle_key_3(){
