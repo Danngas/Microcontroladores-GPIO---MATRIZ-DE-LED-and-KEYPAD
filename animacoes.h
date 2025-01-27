@@ -334,8 +334,8 @@ int Ani2Frame5[5][5][3] =
 //FIM DA ANIMACAO 2 --------------------------------------------------------------------------------
 
 void Animacao2() 
-  float intensidade = 0.01;
-    {  
+      {  
+          float intensidade = 0.01;
     for (int i = 0; i < 10; i++) {  
         for (int j = 0; j < 5; j++) { // Este laço faz o quadro aparecer 5 vezes  
             desenhaSprite(Ani2Frame1,intensidade);  
