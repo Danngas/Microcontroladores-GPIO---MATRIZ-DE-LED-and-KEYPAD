@@ -100,14 +100,14 @@ int getIndex(int x, int y)
   }
 }
 
-void desenhaSprite(int matriz[5][5][3],float intensidade)
+void desenhaSprite(int matriz[5][5][3], float intensidade)
 {
   for (int linha = 0; linha < 5; linha++)
   {
     for (int coluna = 0; coluna < 5; coluna++)
     {
       int posicao = getIndex(linha, coluna);
-      npSetLED(posicao, matriz[coluna][linha][0]*intensidade, matriz[coluna][linha][1]*intensidade, matriz[coluna][linha][2]*intensidade);
+      npSetLED(posicao, matriz[coluna][linha][0] * intensidade, matriz[coluna][linha][1] * intensidade, matriz[coluna][linha][2] * intensidade);
     }
   }
 }
