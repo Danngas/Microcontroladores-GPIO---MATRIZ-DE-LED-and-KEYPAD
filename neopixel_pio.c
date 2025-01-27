@@ -104,23 +104,48 @@ int main()
     {
 
         char key = get_keypad_input();
-        //  char comando[50];
-        // printf("Digite um comando: ");
-        //  scanf("%s", comando);
+        //       char comando[50];
+        //      printf("Digite um comando: ");
+        //      scanf("%s", comando);
         // flamanego_music();
+        //
+        //        if (strcmp(comando, "1") == 0)
+        //        {
+        //            Animacao1();
+        //        }
+        //        else if (strcmp(comando, "2") == 0)
+        //        {
+        //            Animacao2();
+        //        }
+        //        else if (strcmp(comando, "3") == 0)
+        //        {
+        // Animacao3;
+        //        }
+        //        else if (strcmp(comando, "4") == 0)
+        //       {
+        //           Animacao4();
+        //        }
+        //        else if (strcmp(comando, "5") == 0)
+        //        {
+        // Animacao5;
+        //        }
+        //       else if (strcmp(comando, "6") == 0)
+        //        {
+        //            Animacao6();
+        //        }
+        //        else if (strcmp(comando, "7") == 0)
+        ///        {
+        //            Animacao7();
+        //        }
+        //        else if (strcmp(comando, "8") == 0)
+        //        {
+        //            Animacao8();
+        //        }
+        //        else if (strcmp(comando, "9") == 0)
+        //        {
+        //            flamanego_music();
+        //        }
 
-        //  if (strcmp(comando, "GREEN") == 0)
-        //  {
-
-        //}
-         Animacao1();
-         sleep_ms(500);
-         Animacao2();
-         sleep_ms(500);
-         Animacao4();
-         sleep_ms(500);
-         flamanego_music();
-         sleep_ms(500);
         if (key != 0)
         {
             // Imprimir a tecla pressionada
@@ -128,42 +153,47 @@ int main()
             // Tratar teclas numéricas
             if (key == '1')
             {
-                Animacao1();
+                Animacao1(); // BONECO DANCANDO
             }
 
             if (key == '2')
             {
-                Animacao2();
+                Animacao2(); // CONTAGEM
             }
 
             if (key == '3')
             {
+                // NAO TEM NADA
             }
 
             if (key == '4')
             {
-                Animacao4();
+                Animacao4(); // ANIMACAO SETA
             }
 
             if (key == '5')
             {
+                // NAO TEM NADA
             }
 
             if (key == '6')
             {
+                Animacao6(); // CHUVA COM RELAMPAGO
             }
 
             if (key == '7')
             {
+                Animacao7(); // conrinha maça
             }
 
             if (key == '8')
             {
+                Animacao8(); // cobrinha onda
             }
 
             if (key == '9')
             {
-                flamanego_music();
+                flamanego_music(); // FLAMEMGO
             }
 
             // Tratar teclas de controle de LED RGB
