@@ -3,9 +3,7 @@
 #define LED_COUNT 25
 #define LED_PIN 7
 
-//CODIGO RESPONSAVEL PELO FUNCIONAMENTO DA MATRIZ DE LED
-
-
+// CODIGO RESPONSAVEL PELO FUNCIONAMENTO DA MATRIZ DE LED
 
 // Definir o layout da matriz do teclado e os pinos correspondentes
 char keypad_layout[4][4] = {
@@ -35,11 +33,10 @@ void ini_keypad()
         gpio_set_dir(keypad_col_pins[i], GPIO_IN);
         gpio_pull_up(keypad_col_pins[i]);
     }
-
 }
 
-
-char get_keypad_input(){
+char get_keypad_input()
+{
     char pressed_key = 0;
 
     // Iterar sobre cada linha para detectar teclas pressionadas
