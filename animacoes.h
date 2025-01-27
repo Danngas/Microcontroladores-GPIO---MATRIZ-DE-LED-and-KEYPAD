@@ -103,23 +103,23 @@ void Animacao1()
     for (int i = 0; i < 10; i++)
     {
         desenhaSprite(Ani1Frame1, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame2, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame3, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame4, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps();; // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame5, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame6, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame7, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame8, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         desenhaSprite(Ani1Frame9, intensidade);
-        fps(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+        fps(); // 14 fps / imagens por segundo / tempo de 70 ms
         // Atualiza os LEDs
     }
 
@@ -127,7 +127,7 @@ void Animacao1()
 }
 
 // -------------------------------------------------------------------------------------------------------
-// ANIMACAO 2 FLAMENGO ------------------------------------------------------------------------------------
+// ANIMACAO 9 FLAMENGO ------------------------------------------------------------------------------------
 
 // Matrizes das letras do nome "FLAMENGO"
 // Vermelho para o fundo: {255, 0, 0}
@@ -196,7 +196,7 @@ int CORACAO[5][5][3] = {
     {{0, 0, 1}, {255, 0, 1}, {0, 0, 0}, {254, 0, 1}, {0, 1, 0}},
     {{0, 1, 0}, {0, 1, 1}, {255, 1, 1}, {1, 0, 1}, {0, 1, 0}}};
 
-void flamanego_music()
+void flamanego_music()//animacao para o botao 9
 {
     // stdio_init_all(); // Inicializa a comunicação com o terminal (para depuração, por exemplo)
     int numeroNotas = sizeof(melodia) / sizeof(melodia[0]); // Número de notas na melodia
@@ -223,52 +223,52 @@ void flamanego_music()
         if (count == 0)
         {
             desenhaSprite(letraF, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 10)
         {
             desenhaSprite(letraL, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 20)
         {
             desenhaSprite(letraA, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 30)
         {
             desenhaSprite(letraM, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 40)
         {
             desenhaSprite(letraE, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 50)
         {
             desenhaSprite(letraN, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 60)
         {
             desenhaSprite(letraG, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count == 70)
         {
             desenhaSprite(letraO, intensidade);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count >= 80 && count <100)        {
             intensiti = intensiti + 0.01;
             desenhaSprite(CORACAO, intensiti);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
         }
         if (count > 100)        {
             intensiti = intensiti - incremento;
             desenhaSprite(CORACAO, intensiti);
-            fps2(0.1); // 14 fps / imagens por segundo / tempo de 70 ms
+            fps2(); // 14 fps / imagens por segundo / tempo de 70 ms
             if(intensiti<0.01){
                 incremento = -incremento;
 
@@ -283,4 +283,148 @@ void flamanego_music()
 
     printf("Reprodução concluída.\n"); // Mensagem de fim da execução
                                        // Finaliza o programa
+}
+
+// Frames Animacao 2 - GISELE ------------------------------------------------------------------------------------
+int Ani2Frame1[5][5][3] =
+    {
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},  
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}} 
+    } ;
+
+int Ani2Frame2[5][5][3] = 
+    {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},    
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}}
+    };
+
+int Ani2Frame3[5][5][3] = 
+    {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},    
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}}
+    };
+
+int Ani2Frame4[5][5][3] =
+    {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},  
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}}
+    };
+
+int Ani2Frame5[5][5][3] =
+    {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}}
+    };
+
+//FIM DA ANIMACAO 2 --------------------------------------------------------------------------------
+
+void Animacao2() 
+  float intensidade = 0.01;
+    {  
+    for (int i = 0; i < 10; i++) {  
+        for (int j = 0; j < 5; j++) { // Este laço faz o quadro aparecer 5 vezes  
+            desenhaSprite(Ani2Frame1,intensidade);  
+            fps();  
+        }  
+        
+        for (int j = 0; j < 5; j++) {  
+            desenhaSprite(Ani2Frame2,intensidade);  
+            fps();  
+        }  
+        
+        for (int j = 0; j < 5; j++) {  
+            desenhaSprite(Ani2Frame3,intensidade);  
+            fps();  
+        }  
+        
+        for (int j = 0; j < 5; j++) {  
+            desenhaSprite(Ani2Frame4,intensidade);  
+            fps();  
+        }  
+        
+        for (int j = 0; j < 5; j++) {  
+            desenhaSprite(Ani2Frame5,intensidade);  
+            fps();  
+        }  
+    }  
+    
+    DesligarLeds();  
+
+} 
+
+//------ Frames animacao 4 - Henrique----------------------------------------------------------------------
+int Ani4Frame1[5][5][3] = {
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},    
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},      
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},      
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},      
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}       
+};
+
+int Ani4Frame2[5][5][3] = {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+};
+
+int Ani4Frame3[5][5][3] = {
+    {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+};
+
+int Ani4Frame4[5][5][3] = {
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+};
+
+int Ani4Frame5[5][5][3] = {
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}},
+    {{0, 0, 0}, {255, 0, 0}, {255, 0, 0}, {255, 0, 0}, {0, 0, 0}},
+    {{0, 0, 0}, {0, 0, 0}, {255, 0, 0}, {0, 0, 0}, {0, 0, 0}}
+};
+
+//FIM DA ANIMACAO 4  henrique --------------------------------------------------------------------------------
+
+void Animacao4(){
+  float intensidade = 0.01;
+    for (int i = 0; i < 10; i++)
+    {
+        desenhaSprite(Ani4Frame1,intensidade);
+        fps();
+        desenhaSprite(Ani4Frame2,intensidade);
+        fps();
+        desenhaSprite(Ani4Frame3,intensidade);
+        fps();
+        desenhaSprite(Ani4Frame4,intensidade);
+        fps();
+        desenhaSprite(Ani4Frame5,intensidade);
+        fps();
+    }
+    DesligarLeds();
+
 }

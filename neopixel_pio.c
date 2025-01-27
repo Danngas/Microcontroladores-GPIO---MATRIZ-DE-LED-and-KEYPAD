@@ -61,45 +61,6 @@ void control_rgb_led(char key)
     }
 }
 
-// Funções para teclas numéricas
-void handle_key_1()
-{
-}
-
-void handle_key_2()
-{
-}
-
-void handle_key_3()
-{
-}
-
-void handle_key_4()
-{
-}
-
-void handle_key_5()
-{
-}
-
-void handle_key_6()
-{
-}
-
-void handle_key_7()
-{
-}
-
-void handle_key_8()
-{
-    // Implementação futura
-}
-
-void handle_key_9()
-{
-    // Implementação futura
-}
-
 // Função para escanear o teclado e detectar uma tecla pressionada
 
 // rotina da interrupção
@@ -162,19 +123,19 @@ int main()
             if (key == '1')
                 Animacao1();
             if (key == '2')
-               // Animacao2();
+               Animacao2();
             if (key == '3')
-                handle_key_3();
+               
             if (key == '4')
-                handle_key_4();
+                Animacao4();
             if (key == '5')
-                handle_key_5();
+               
             if (key == '6')
-                handle_key_6();
+                
             if (key == '7')
-                handle_key_7();
+               
             if (key == '8')
-                handle_key_8();
+               
             if (key == '9')
                 flamanego_music();
 
