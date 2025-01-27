@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "hardware/gpio.h"
 #include "hardware/clocks.h"
-//#include "stdlib.h"
+// #include "stdlib.h"
 #include "keypad.c" // BIBLIOTECA PARA FUNCIONAMENTO DO TECLADO // JA CONFIGURADO
-//#include "buzzer.c"
+// #include "buzzer.c"
 #include "animacoes.h"
 #include "stdlib.h"
 #include "string.h"
 #include "pico/bootrom.h"
-//#include "songs.c"
-// #include "matrizled.c"
+// #include "songs.c"
+//  #include "matrizled.c"
 
 // FIM DO FUNCIONAMENTO DA MATRIZ DE LEDS-------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@
 #define LED_RED_PIN 13
 #define LED_GREEN_PIN 11
 #define LED_BLUE_PIN 12
-//#define BUZZER_PIN 21
+// #define BUZZER_PIN 21
 #define LED_PIN 7
 
 // botão de interupção
@@ -90,8 +90,8 @@ int main()
     ini_keypad();
 
     // INICIALIZA O BUZZER
-    //pwm_init_buzzer(BUZZER_PIN);
-    //pwm_init_buzzer(BUZZER_PIN);
+    // pwm_init_buzzer(BUZZER_PIN);
+    // pwm_init_buzzer(BUZZER_PIN);
 
     // interrupção da gpio habilitada
     gpio_set_irq_enabled_with_callback(button_0, GPIO_IRQ_EDGE_FALL, 1, &gpio_irq_handler);
@@ -104,40 +104,67 @@ int main()
     {
 
         char key = get_keypad_input();
-      //  char comando[50];
-       // printf("Digite um comando: ");
+        //  char comando[50];
+        // printf("Digite um comando: ");
         //  scanf("%s", comando);
-       // flamanego_music();
-   
+        // flamanego_music();
 
         //  if (strcmp(comando, "GREEN") == 0)
         //  {
 
         //}
-
+         Animacao1();
+         sleep_ms(500);
+         Animacao2();
+         sleep_ms(500);
+         Animacao4();
+         sleep_ms(500);
+         flamanego_music();
+         sleep_ms(500);
         if (key != 0)
         {
             // Imprimir a tecla pressionada
             printf("Tecla pressionada: %c\n", key);
             // Tratar teclas numéricas
             if (key == '1')
+            {
                 Animacao1();
+            }
+
             if (key == '2')
-               Animacao2();
+            {
+                Animacao2();
+            }
+
             if (key == '3')
-               
+            {
+            }
+
             if (key == '4')
+            {
                 Animacao4();
+            }
+
             if (key == '5')
-               
+            {
+            }
+
             if (key == '6')
-                
+            {
+            }
+
             if (key == '7')
-               
+            {
+            }
+
             if (key == '8')
-               
+            {
+            }
+
             if (key == '9')
+            {
                 flamanego_music();
+            }
 
             // Tratar teclas de controle de LED RGB
             if (key >= 'A' && key <= 'D')
@@ -148,7 +175,7 @@ int main()
             // Tratar controle do Buzzer
             if (key == '#')
             {
-                //beep(BUZZER_PIN, 2000);
+                // beep(BUZZER_PIN, 2000);
             }
 
             if (key == '*')
