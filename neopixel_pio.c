@@ -47,7 +47,7 @@ void control_rgb_led(char key)
     switch (key)
     {
     case 'A':
-
+          DesligarLeds();
         break;
     case 'B':
 
@@ -210,7 +210,7 @@ int main()
 
             if (key == '*')
             {
-                desligarleds();
+                gpio_irq_handler(key, GPIO_IRQ_EDGE_FALL);
             }
         }
 
