@@ -40,6 +40,34 @@ void desligarleds()
 {
 }
 
+int blue_leds[5][5][3] = {
+    {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+    {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+    {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+    {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+    {{0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}, {0, 0, 255}},
+};
+
+void B_Key(){
+    // Função para acender todos os LEDs no azul 100% de intensidade
+    desenhaSprite(blue_leds);
+    fps();
+}
+
+int red_leds80[5][5][3] = {
+    {{204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}},
+    {{204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}},
+    {{204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}},
+    {{204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}},
+    {{204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}, {204, 0, 0}},
+};
+
+void C_Key(){
+    // Função para acender todos os LEDs no vermelho 80% de intensidade
+    desenhaSprite(red_leds80);
+    fps();
+}
+
 // Função para controlar o LED RGB com base na tecla pressionada
 void control_rgb_led(char key)
 {
@@ -50,10 +78,10 @@ void control_rgb_led(char key)
           DesligarLeds();
         break;
     case 'B':
-
+        B_Key();
         break;
     case 'C':
-
+        C_Key();
         break;
     case 'D':
 
